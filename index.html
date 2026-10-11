@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Point Lights Illuminate Objects From Different Directions in Games</title>
+<meta name="description" content="Explore how point lights radiate from a single position, how distance and surface orientation influence illumination, and where these lights are commonly useful in game design.">
+<link rel="canonical" href=""><script>document.querySelector('link[rel="canonical"]').href=window.location.href;</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How Point Lights Illuminate Objects From Different Directions in Games","publisher":{"@type":"Organization","name":"h555pk.com.pk"}}</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Archivo',sans-serif;background:#fff;color:#111;line-height:1.8;font-weight:300}
+.hero{background:#111;padding:56px 28px;text-align:left;max-width:100%}
+.hero h1{max-width:820px;font-size:2.5rem;font-weight:900;color:#fff;line-height:1.15}
+.hero p.tag{color:#999;font-size:.9rem;margin-top:14px;text-transform:uppercase;letter-spacing:.08em}
+main{max-width:860px;margin:0 auto;padding:50px 28px}
+.intro{font-size:1.1rem;color:#333;margin-bottom:40px;padding-bottom:30px;border-bottom:2px solid #111}
+.intro a{color:#111;font-weight:700;text-decoration:none;border-bottom:2px solid #111}
+h2{font-size:1.6rem;font-weight:900;color:#111;margin:44px 0 18px}
+p{font-size:1.06rem;color:#444;margin-bottom:18px}
+.diagram{background:#f5f5f5;padding:32px 28px;margin:36px 0;display:flex;gap:28px;align-items:flex-start}
+.diagram .icon{font-size:3rem;min-width:60px;text-align:center;padding-top:4px}
+.diagram .text h4{font-size:1.1rem;font-weight:700;margin-bottom:10px}
+.diagram .text p{font-size:1.02rem;color:#555;margin:0}
+ul{padding-left:0;list-style:none;margin:26px 0}
+li{margin-bottom:14px;padding-left:24px;position:relative;font-size:1.05rem;color:#333}
+li::before{content:'→';position:absolute;left:0;color:#111;font-weight:700}
+.note{background:#111;color:#f0f0f0;padding:22px 26px;margin:36px 0;font-size:1.06rem}
+footer{text-align:center;padding:28px;color:#bbb;font-size:.88rem;border-top:1px solid #eee;margin-top:60px}
+@media(max-width:768px){.hero h1{font-size:1.85rem}main{padding:36px 18px}.diagram{flex-direction:column;gap:16px}}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>How Point Lights Illuminate Objects From Different Directions in Games</h1>
+<p class="tag">Game Lighting — Light Source Types</p>
+</div>
+<main>
+<p class="intro">Point lights illuminate a scene from a defined position, spreading light outward in multiple directions. Their influence changes according to an object's distance and the orientation of its surface, making them useful for lamps, bulbs, and other localized sources. Developers need to manage their placement and number because many active lights can increase rendering demands. Players browsing game titles on <a href="https://h555pk.com.pk/">H555</a> will encounter point lights constantly — they are the foundation of interior lighting in most 3D games, standing behind every glowing lamp, floating orb, and ambient bulb in a game's environment.</p>
+<p>The point light is one of the most fundamental and widely used light source types in game development. Its behavior — radiating equally in all directions from a single position — maps naturally to the real-world behavior of a bare bulb, candle flame, or any other roughly spherical light emitter.</p>
+<div class="diagram">
+<div class="icon">💡</div>
+<div class="text"><h4>How a Point Light Behaves</h4><p>Light originates from a single point in space. Surfaces closer to that point receive stronger illumination. Surfaces farther away receive weaker light according to an attenuation formula. A surface facing directly toward the light receives more illumination than one facing away, because the angle between the surface normal and the light direction affects how much of the light energy reaches the surface.</p></div>
+</div>
+<h2>Distance and Surface Orientation</h2>
+<p>Two factors determine how strongly a point light affects any given surface. The first is distance — as an object moves farther from the light, its illumination decreases. The rate of this decrease is controlled by the attenuation settings assigned to the light, which developers can tune to produce either a gradual wide falloff or a tight radius of influence.</p>
+<p>The second factor is surface orientation. A face of an object pointing directly toward the light source receives the most illumination. A face pointing perpendicular to the light direction receives less. A face pointing away receives none. This directional response is what gives point lights their characteristic look — objects are brightly lit on the side facing the source and darker on the side facing away.</p>
+<h2>Common Uses in Game Environments</h2>
+<ul>
+<li>Indoor ceiling fixtures and hanging lamps that light rooms from above</li>
+<li>Candles and torches providing warm localized glow in historical or fantasy settings</li>
+<li>Magical or science-fiction effects like glowing orbs, energy cores, and power sources</li>
+<li>Ambient fill lights placed invisibly to ensure areas do not fall into complete darkness</li>
+</ul>
+<div class="note">Managing point light count matters for rendering performance. Each additional active point light in a scene may require additional shading calculations per frame. Developers balance desired visual richness against hardware capability by using baked lighting for permanent fixtures and reserving dynamic point lights for interactive or moving elements.</div>
+</main>
+<footer>© 2026</footer>
+</body>
+</html>
